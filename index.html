@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="style.css">
     </head>
-
+    
     <body>
         <head>
                 <h1>A message to your future self !</h1>
@@ -16,14 +16,14 @@
             </nav>
         </head>
         
-        <form method="post" action="contact.php">
-            <label for="titre" >Title</label> : <br><input id ="titre" type="text" ><br>
-            <label for="nom" >Nom</label> : <br><input name="sender" id ="nom" type="text" ><br>
-            <label for="email">Email</label> : <br><input name="senderEmail" id="email" type="email"><br>
+        <form method="post" name="contac_form" action="contact.php">
+            <label for="titre" >Title</label> : <br><input name="subject" id ="titre" type="text" ><br>
+            <label for="nom" >Nom</label> : <br><input name="name" id ="nom" type="text" ><br>
+            <label for="email">Email</label> : <br><input name="mail" id="email" type="email"><br>
             <label for="message">Write your letter here.</label><br>
             <textarea name="message" id="message" cols="50" rows="10"></textarea><br>
-            <button name="submit" type="submit">Submit</button>
+            <button name="submit" type="submit">Send the letter</button>
         </form>
-        
+        <script src="script.js"></script>
     </body>
 </html>

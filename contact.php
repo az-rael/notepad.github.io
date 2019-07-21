@@ -1,15 +1,19 @@
 <?php
-    if($_POST["submit"]) {
-        $recipient="your@email.address";
-        $subject="Form to email message";
-        $sender=$_POST["sender"];
-        $senderEmail=$_POST["senderEmail"];
-        $message=$_POST["message"];
 
-        $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email_address = $_POST['mail'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-     mail($recipient, $subject, $mailBody, "From: $sender < $senderEmail >");
+    $to = $email_address;
+    $headers = "From: ".$email_address;
+    $txt = "You have received an email from ".$name. ".\n\n".$message;
 
-        $thankYou="<p>Thank you! Your message has been sent.</p>";
-    }
+
+
+    mail($to, $subject, $txt, $headers);
+    header("Location: index.php?mailsend");
+
+}
 ?>
