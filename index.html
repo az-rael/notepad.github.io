@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <head>
+                <h1>A message to your future self !</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Reset</a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/watch?v=c6JmD33kct0">Music</a></li> <!--What I was listening to while making this nav bar-->
+                </ul>
+            </nav>
+        </head>
+        
+        <form method="post" action="contact.php">
+            <label for="titre" >Title</label> : <br><input id ="titre" type="text" ><br>
+            <label for="nom" >Nom</label> : <br><input name="sender" id ="nom" type="text" ><br>
+            <label for="email">Email</label> : <br><input name="senderEmail" id="email" type="email"><br>
+            <label for="message">Write your letter here.</label><br>
+            <textarea name="message" id="message" cols="50" rows="10"></textarea><br>
+            <button name="submit" type="submit">Submit</button>
+        </form>
+        
+    </body>
+</html>
